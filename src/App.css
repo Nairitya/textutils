@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+.preview-block {
+  padding: 5px;
+  margin: 20px 0;
+  border: solid #0275d8 0.5px;
+  box-shadow: 0 0 0 8px rgb(2, 117, 216, 0.2);
+  border-radius: 4px;
+}
