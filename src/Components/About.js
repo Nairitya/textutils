@@ -1,24 +1,26 @@
-import React, { useState } from "react";
+import React from "react";
 
 const About = (props) => {
 
+  let bgStyle = {
+    backgroundColor: props.mode === "light" ? "white" : "#092048",
+    color: props.mode === "light" ? "black" : "white",
+  }
+  let accordionStyle = {
+    backgroundColor: props.mode === "light" ? "white" : "#3a4c66",
+    color: props.mode === "light" ? "black" : "white",
+  }
 
   return (
     <>
       <div
         class="accordion container my-5 "
         id="accordionExample"
-        style={{
-          backgroundColor: props.mode === "light" ? "white" : "#092040",
-          color: props.mode === "light" ? "black" : "white",
-        }}
+        style={bgStyle}
       >
         {" "}
         <h1>About Us</h1>
-        <div class="accordion-item" style={{
-          backgroundColor: props.mode === "light" ? "white" : "#3a4c66",
-          color: props.mode === "light" ? "black" : "white",
-        }}>
+        <div class="accordion-item" style={accordionStyle}>
           <h2 class="accordion-header" id="headingOne">
             <button
               class="accordion-button"
@@ -27,10 +29,7 @@ const About = (props) => {
               data-bs-target="#collapseOne"
               aria-expanded="true"
               aria-controls="collapseOne"
-              style={{
-                backgroundColor: props.mode === "light" ? "white" : "#3a4c66",
-                color: props.mode === "light" ? "black" : "white",
-              }}
+              style={accordionStyle}
             >
               Accordion Item #1
             </button>
@@ -53,10 +52,7 @@ const About = (props) => {
             </div>
           </div>
         </div>
-        <div class="accordion-item " style={{
-          backgroundColor: props.mode === "light" ? "white" : "#3a4c66",
-          color: props.mode === "light" ? "black" : "white",
-        }}>
+        <div class="accordion-item " style={accordionStyle}>
           <h2 class="accordion-header" id="headingTwo">
             <button
               class="accordion-button collapsed"
@@ -65,10 +61,7 @@ const About = (props) => {
               data-bs-target="#collapseTwo"
               aria-expanded="false"
               aria-controls="collapseTwo"
-              style={{
-                backgroundColor: props.mode === "light" ? "white" : "#3a4c66",
-                color: props.mode === "light" ? "black" : "white",
-              }}
+              style={accordionStyle}
             >
               Accordion Item #2
             </button>
@@ -91,10 +84,7 @@ const About = (props) => {
             </div>
           </div>
         </div>
-        <div class="accordion-item" style={{
-          backgroundColor: props.mode === "light" ? "white" : "#3a4c66",
-          color: props.mode === "light" ? "black" : "white",
-        }}>
+        <div class="accordion-item" style={accordionStyle}>
           <h2 class="accordion-header" id="headingThree">
             <button
               class="accordion-button collapsed"
@@ -103,10 +93,7 @@ const About = (props) => {
               data-bs-target="#collapseThree"
               aria-expanded="false"
               aria-controls="collapseThree"
-              style={{
-                backgroundColor: props.mode === "light" ? "white" : "#3a4c66",
-                color: props.mode === "light" ? "black" : "white",
-              }}
+              style={accordionStyle}
             >
               Accordion Item #3
             </button>

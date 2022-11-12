@@ -44,3 +44,8 @@
   box-shadow: 0 0 0 8px rgb(2, 117, 216, 0.2);
   border-radius: 4px;
 }
+
+.div-alert {
+  /* position: absolute; */
+  height: 40px;
+}

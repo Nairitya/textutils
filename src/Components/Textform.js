@@ -6,7 +6,7 @@ function Textform(props) {
   const handleOnChange = (e) => {
     setText(e.target.value);
   };
-  const wordCount = text.split(" ").filter((word) => word).length;
+  const wordCount = text.split(/\s+/).filter((word) => word).length;
   const timeCount = (wordCount * 0.008).toFixed(3);
   //   UpperCase Func
   const toUpper = () => {
@@ -101,24 +101,24 @@ function Textform(props) {
             }}
           ></textarea>
         </div>
-        <button className="btn btn-primary" onClick={toUpper}>
+        <button className="btn btn-primary mx-1 my-1 " onClick={toUpper}>
           Convert to UpperCase
         </button>
-        <button className="btn btn-primary mx-3" onClick={toLower}>
+        <button className="btn btn-primary mx-1 my-1" onClick={toLower}>
           Convert to lowercase
         </button>
-        <button className="btn btn-primary" onClick={firstUpper}>
+        <button className="btn btn-primary mx-1 my-1" onClick={firstUpper}>
           First Letters to Uppercase
         </button>
-        <button className="btn btn-primary  mx-3" onClick={makeHashtag}>
+        <button className="btn btn-primary mx-1 my-1" onClick={makeHashtag}>
           Turn into Hashtags
         </button>
 
-        <button className="btn btn-warning " onClick={copyText}>
+        <button className="btn btn-warning mx-1 my-1" onClick={copyText}>
           Copy Text
         </button>
 
-        <button className="btn btn-danger  mx-3" onClick={clearText}>
+        <button className="btn btn-danger  mx-1 my-1" onClick={clearText}>
           Clear Text
         </button>
       </div>
